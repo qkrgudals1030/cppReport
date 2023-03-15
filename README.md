@@ -31,4 +31,4 @@ int main(){
     p3.pr();
     return 0;
 }
-~~~
+~~~ cpp
