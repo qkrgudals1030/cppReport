@@ -1,4 +1,5 @@
 ### 1. friend를 활용하는 [클래스]의 예를 하나 만드시오.
+
 ~~~
 
 #include <iostream>  // friend functions
@@ -14,10 +15,12 @@ int main () {
     cout << me.x << endl;
     return 0;
 }
-~~~
-### 2. [클래스]에서 static을 활용하는 예를 하나 보이시오.
+
 ~~~
 
+### 2. [클래스]에서 static을 활용하는 예를 하나 보이시오.
+
+~~~
 #include <iostream>
 using namespace std;
 class Cnt {
@@ -39,4 +42,26 @@ int main() {
 ~~~
 
 ### 3. Poly로 부터 w, h를 상속받고,사각형의 면적을 구하는 코딩을 하시오. 포인터를 활용하여 화면에 출력하시오.
+
+~~~
+
+#include<iostream>
+using namespace std;
+class CPoly{
+protected:
+	int w, h;
+};
+class CRect : public CPoly{
+public:
+	CRect(){ w=2; h=3;}
+	int Area(){ cout << w*h;}	
+};
+int main(){
+	CRect r;
+	CRect* p = &r;
+	p->Area();
+	//r.Area();
+}
+
+~~~
 
